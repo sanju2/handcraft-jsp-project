@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 7, 2022 2:29:19 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="handcraft.Orders" table="orders" catalog="handcraft" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="productname" type="string">
+            <column name="productname" length="100" not-null="true" />
+        </property>
+        <property name="quentity" type="int">
+            <column name="quentity" not-null="true" />
+        </property>
+        <property name="price" type="string">
+            <column name="price" length="20" not-null="true" />
+        </property>
+        <property name="postalcode" type="int">
+            <column name="postalcode" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="200" not-null="true" />
+        </property>
+        <property name="mobileno" type="int">
+            <column name="mobileno" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
